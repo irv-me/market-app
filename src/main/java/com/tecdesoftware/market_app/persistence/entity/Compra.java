@@ -24,7 +24,6 @@ public class Compra {
 
     private String comentario;
 
-
     public int getIdCompra() {
         return idCompra;
     }
