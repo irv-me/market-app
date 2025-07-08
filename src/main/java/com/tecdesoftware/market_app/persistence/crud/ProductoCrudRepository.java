@@ -1,10 +1,8 @@
 package com.tecdesoftware.market_app.persistence.crud;
 import com.tecdesoftware.market_app.persistence.entity.Producto;
 import org.springframework.data.repository.CrudRepository;
-
 import java.util.List;
 import java.util.Optional;
-
 
 public interface ProductoCrudRepository extends CrudRepository<Producto, Integer> {
 
@@ -21,4 +19,6 @@ public interface ProductoCrudRepository extends CrudRepository<Producto, Integer
 
     // Obtener los productos escasos
     Optional<List<Producto>> findByCantidadStockLessThanAndEstado(int cantidad, boolean estado);
+
+    List<Producto> findByIdCategoriaOrderByNombreAsc(int idCategoria);
 }
