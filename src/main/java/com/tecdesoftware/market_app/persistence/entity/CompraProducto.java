@@ -11,7 +11,8 @@ public class CompraProducto {
     private Double total;
     private Boolean estado;
 
-    //SAber todos los productos que hay en una compra
+    //Saber todos los productos que hay en una compra
+    //Unir la tabla compras
     @ManyToOne
     @JoinColumn(name= "id_compra", insertable=false, updatable=false)
     private Compra compra;
@@ -49,6 +50,6 @@ public class CompraProducto {
     }
 
     public void setEstado(Boolean estado) {
-        this.estado =estado;
-}
+        this.estado = estado;
+    }
 }

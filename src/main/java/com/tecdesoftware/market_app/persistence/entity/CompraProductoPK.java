@@ -6,15 +6,15 @@ import jakarta.persistence.Id;
 
 import java.io.Serializable;
 
-// Para unir las 2 llaves y crear una llave compuesta
+//Para unir las 2 llaves y crear una llave compuesta
+//Serializable es para que sea autoincrementable
 @Embeddable
-
 public class CompraProductoPK implements Serializable {
-    @Id
-    @Column(name = "id_compra")
+
+    @Column(name="id_compra")
     private int idCompra;
 
-    @Column (name = "Id_producto")
+    @Column(name="id_producto")
     private int idProducto;
 
     public int getIdCompra() {
@@ -23,5 +23,13 @@ public class CompraProductoPK implements Serializable {
 
     public void setIdCompra(int idCompra) {
         this.idCompra = idCompra;
+    }
+
+    public int getIdProducto() {
+        return idProducto;
+    }
+
+    public void setIdProducto(int idProducto) {
+        this.idProducto = idProducto;
     }
 }
