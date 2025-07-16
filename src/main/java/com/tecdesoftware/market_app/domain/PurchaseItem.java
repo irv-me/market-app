@@ -1,17 +1,17 @@
 package com.tecdesoftware.market_app.domain;
 
 public class PurchaseItem {
-    private int product_id;
+    private int productId;
     private int quantity;
-    private double total;
+    private double totalPrice;
     private boolean active;
 
-    public int getProduct_id() {
-        return product_id;
+    public int getProductId() {
+        return productId;
     }
 
-    public void setProduct_id(int product_id) {
-        this.product_id = product_id;
+    public void setProductId(int productId) {
+        this.productId = productId;
     }
 
     public int getQuantity() {
@@ -22,12 +22,12 @@ public class PurchaseItem {
         this.quantity = quantity;
     }
 
-    public double getTotal() {
-        return total;
+    public double getTotalPrice() {
+        return totalPrice;
     }
 
-    public void setTotal(double total) {
-        this.total = total;
+    public void setTotalPrice(double totalPrice) {
+        this.totalPrice = totalPrice;
     }
 
     public boolean isActive() {
